@@ -1,7 +1,7 @@
 #define int unsigned long long
-#define SET(m, i) ((m)|(11ULL<<(i)))
-#define TEST(m, i) ((m)&(11ULL<<(i)))
-#define CLEAR(m, i) ((m)&~(11ULL<<(i)))
+#define SET(m, i) ((m)|(1ULL<<(i)))
+#define TEST(m, i) ((m)&(1ULL<<(i)))
+#define CLEAR(m, i) ((m)&~(1ULL<<(i)))
 #define vi vector<int>
 #define vvi vector<vi>
 
@@ -10,14 +10,15 @@ int n;
 
 int intersection(int C, vi &N){
     int auxS = 0;
-    for(int &i : N) auxS = SET(auxS, i);
+    for(int i : N) auxS = SET(auxS, i);
     return C & auxS;
 }
 
-int countBits(int k){
+int countBits(int x) {
     int c = 0;
-    for(;n; c += n&1) n -= n&-n;
-    return c;
+    while (x) {
+        c++, x -= x&-x;
+    }return c;
 }
 
 int pivot(int &P, int &X){
