@@ -4,7 +4,7 @@ int dp[MAX];
 void Dijkstra(int st){
     
     memset(dp, -1, sizeof(dp));
-    priority_queue<pair<int, int>, vector<pair<int, int>>, less<pair<int, int>>> pq;
+    priority_queue<pair<int, int>> pq;
     dp[st] = 0; pq.push({0, st});
     while(!pq.empty()){
         st = pq.top().second; int w = -pq.top().first; pq.pop(); 
