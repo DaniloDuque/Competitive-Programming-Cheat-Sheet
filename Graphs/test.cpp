@@ -1,7 +1,10 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 #define int unsigned long long
-#define SET(m, i) ((m)|(1LL<<(i)))
-#define TEST(m, i) ((m)&(1LL<<(i)))
-#define CLEAR(m, i) ((m)&~(1LL<<(i)))
+#define SET(m, i) ((m)|(1<<(i)))
+#define TEST(m, i) ((m)&(1<<(i)))
+#define CLEAR(m, i) ((m)&~(1<<(i)))
 #define vi vector<int>
 #define vvi vector<vi>
 
@@ -37,3 +40,9 @@ int maxClique(int R, int P, int X){
     return max;    
 }
 
+signed main(){
+    
+    
+    return 0;
+
+}
