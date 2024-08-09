@@ -1,7 +1,7 @@
 #define int unsigned long long
-#define SET(m, i) ((m)|(1LL<<(i)))
-#define TEST(m, i) ((m)&(1LL<<(i)))
-#define CLEAR(m, i) ((m)&~(1LL<<(i)))
+#define SET(m, i) ((m)|(11ULL<<(i)))
+#define TEST(m, i) ((m)&(11ULL<<(i)))
+#define CLEAR(m, i) ((m)&~(11ULL<<(i)))
 #define vi vector<int>
 #define vvi vector<vi>
 

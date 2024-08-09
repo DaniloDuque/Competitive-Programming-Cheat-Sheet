@@ -2,9 +2,9 @@
 using namespace std;
 
 #define int unsigned long long
-#define SET(m, i) ((m)|(1<<(i)))
-#define TEST(m, i) ((m)&(1<<(i)))
-#define CLEAR(m, i) ((m)&~(1<<(i)))
+#define SET(m, i) ((m)|(1LL<<(i)))
+#define TEST(m, i) ((m)&(1LL<<(i)))
+#define CLEAR(m, i) ((m)&~(1LL<<(i)))
 #define vi vector<int>
 #define vvi vector<vi>
 
@@ -42,7 +42,14 @@ int maxClique(int R, int P, int X){
 
 signed main(){
     
-    
+    int m, v1, v2;
+    scanf("%lld, %lld", &n, &m);
+    G.assign(n, {});
+    while(m--){
+        scanf("%lld %lld", &v1, &v2);
+        G[v1].push_back(v2);
+        G[v2].push_back(v1);
+    }printf("%lld\n", maxClique(0, (1ULL<<n)-1, 0));
     return 0;
 
 }
