@@ -5,3 +5,4 @@ Team Variable Compleja's go-to reference for algorithms, data structures, and pr
 ## https://github.com/stevenhalim/cpbook-code
 ## https://github.com/vmartinv/eldiego
 ## https://github.com/mhunicken/icpc-team-notebook-el-vasito
+## https://github.com/jaehyunp/stanfordacm
