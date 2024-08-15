@@ -16,6 +16,9 @@ This tutorial will guide you through the process of setting up and using the `or
 First, you need to define the `ordered_set` using PBDS. Here’s how you can do it:
 
 ```cpp
+#include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
 using namespace __gnu_pbds;
 using namespace std;
 
