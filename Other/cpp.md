@@ -6,3 +6,15 @@
 ```cpp
 x&-x
 ```
+## Population Count
+```cpp
+__builtin_popcount(x)
+```
+## Count Trailing Zeros
+```cpp
+__builtin_ctz(x)
+```
+## Count Leading Zeros
+```cpp
+__builtin_clz(x)
+```
