@@ -18,3 +18,7 @@ __builtin_ctz(x)
 ```cpp
 __builtin_clz(x)
 ```
+## Make prefix sum array
+```cpp
+partial_sum(arr, arr+n, arr)
+```
