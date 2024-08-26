@@ -2,13 +2,6 @@ pair<int, int> G[MAX];
 int n, in_deg[MAX], out_deg[MAX];
 stack<int> path;
 
-void countDegrees(){
-    for(int i = 0; i<n; ++i){
-        out_deg[i]+=G[i].size();
-        for(int &j : G[i]) ++in_deg[j];
-    }
-}
-
 bool Eulerian(){
     int stV = 0, endV = 0;
     for(int i = 0; i<n; ++i){
@@ -36,7 +29,10 @@ void dfs(int i){
 
 //if graph has eulerian path or circuit it will be stored in path
 void FindEulerian(){
-    countDegrees();
+    for(int i = 0; i<n; ++i){
+        out_deg[i]+=G[i].size();
+        for(int &j : G[i]) ++in_deg[j];
+    }
     if(!Eulerian()) return;
     dfs(stV());
 }
