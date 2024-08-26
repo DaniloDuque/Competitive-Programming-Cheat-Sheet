@@ -1,4 +1,4 @@
-pair<int, int> G[MAX];
+vector<int> G[MAX];
 int n, in_deg[MAX], out_deg[MAX];
 stack<int> path;
 
