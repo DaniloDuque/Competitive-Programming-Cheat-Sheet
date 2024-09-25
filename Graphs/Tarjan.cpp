@@ -24,8 +24,8 @@ void Tarjan(int u){
 }
 
 int scc() {
-    mset0(dfn); mset0(low); mset0(block); ind = color = 0;
-    mset0(instack); while (!sk.empty()) sk.pop();
+    CLEAN(dfn); CLEAN(low); CLEAN(block); ind = color = 0;
+    CLEAN(instack); while (!sk.empty()) sk.pop();
     for (int i=1; i<=n; ++i) if (!dfn[i]) tarjan(i);
     return color;
 }
