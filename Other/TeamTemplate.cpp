@@ -12,7 +12,6 @@ using vec=vector<T>;
 #define snd second
 #define fst first
 #define ll long long
-
 const int MAX = 2e5+20;
 int t = 1;
 
