@@ -2,27 +2,23 @@ typedef ll tf;
 typedef ll tc;
 const tf INFFLOW = 1e9;
 const tc INFCOST = 1e9;
-
 struct MCF {
     int n;
-    vector<tc> prio, pot;
-    vector<tf> curflow;
-    vector<int> prevedge, prevnode;
-    vector<vector<edge>> g;
-    priority_queue<pair<tc, int>, vector<pair<tc, int>>, greater<pair<tc, int>>> q;
+    vec<tc> prio, pot;
+    vec<tf> curflow;
+    vec<int> prevedge, prevnode;
+    priority_queue<pair<tc, int>, vec<pair<tc, int>>, greater<pair<tc, int>>> q;
     struct edge {
         int to, rev;
         tf f, cap;
         tc cost;
     };
-
+    vec<vec<edge>> g;
     MCF(int n) : n(n), prio(n), curflow(n), prevedge(n), prevnode(n), pot(n), g(n) {}
-
     void add_edge(int s, int t, tf cap, tc cost) {
         g[s].push_back({t, (int)g[t].size(), 0, cap, cost});
         g[t].push_back({s, (int)g[s].size() - 1, 0, 0, -cost});
     }
-
     pair<tf, tc> get_flow(int s, int t) {
         tf flow = 0;
         tc flowcost = 0;
@@ -37,7 +33,6 @@ struct MCF {
                 int u = cur.second;
                 q.pop();
                 if (d != prio[u]) continue;
-
                 for (int i = 0; i < (int)g[u].size(); ++i) {
                     edge &e = g[u][i];
                     int v = e.to;
@@ -51,8 +46,7 @@ struct MCF {
                         curflow[v] = min(curflow[u], e.cap - e.f);
                     }
                 }
-            }
-            if (prio[t] == INFCOST) break;
+            }if (prio[t] == INFCOST) break;
             for (int i = 0; i < n; ++i) pot[i] += prio[i];
             tf df = min(curflow[t], INFFLOW - flow);
             flow += df;
