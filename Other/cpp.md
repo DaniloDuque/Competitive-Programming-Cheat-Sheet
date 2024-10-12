@@ -24,7 +24,7 @@ partial_sum(arr, arr+n, arr)
 ```
 ## Remove contiguous groups of equal elements
 ```cpp
-v.erase(ALL(v), v.end());
+v.erase(unique(ALL(v)), v.end());
 ```
 
 
