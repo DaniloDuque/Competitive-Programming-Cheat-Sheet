@@ -5,7 +5,7 @@ using namespace std;
 #define TEST(m, i) ((m) & (1ULL << (i)))
 #define CLEAR(m, i) ((m) &~ (1ULL << (i)))
 #define DEBUG(n) cout<<#n<<" = "<<n<<'\n'
-#define MSET(arr, x, n) (memset(arr, x, n*sizeof(arr[0])))
+#define MSET(arr, x, n) (memset(arr, x, (n)*sizeof(arr[0])))
 #define ALL(v) (v).begin(), (v).end()
 #define vec vector
 #define snd second
