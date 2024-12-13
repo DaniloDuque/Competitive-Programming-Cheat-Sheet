@@ -2,9 +2,9 @@ int sv[MAX]; //-1 if prime, trivial divisor if not
 
 void init(){
     memset(sv, -1, sizeof(sv));
-    for(int i = 2; i<MAX; ++i)
+    for(ll i = 2; i<MAX; ++i)
         if(sv[i] < 0)
-            for(int j = 1LL*i*i; j<MAX; j+=i) sv[j] = i;
+            for(ll j = 1LL*i*i; j<MAX; j+=i) sv[j] = i;
 
 }
 
