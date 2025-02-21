@@ -10,6 +10,7 @@ using namespace std;
 #define vec vector
 #define snd second
 #define fst first
+#define pb push_back
 #define ll long long
 const int MAX = 2e5+20, MOD = 1e9+7;
 int t=1;
