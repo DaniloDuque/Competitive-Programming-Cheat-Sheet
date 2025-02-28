@@ -13,7 +13,7 @@ using namespace std;
 #define pb push_back
 #define ll long long
 const int MAX = 2e5+20, MOD = 1e9+7;
-int t=1;
+ll n;
 
 void solve(){        
     
@@ -22,6 +22,7 @@ void solve(){
 signed main(){
     ios::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
+    int t=1;
     cin>>t;
     while(t--){
         solve();
