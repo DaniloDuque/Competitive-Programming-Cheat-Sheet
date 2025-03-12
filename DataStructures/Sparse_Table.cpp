@@ -2,7 +2,7 @@
 int spt[K][1<<K], n; // -> 2^K > n
 
 void init(int *a){
-    for(int i = 0; i<n;) spt[0][i] = a[i++];
+    for(int i = 0; i<n; ++i) spt[0][i] = a[i];
     for(int k = 1; k<K; ++k)
         for(int i = 0; i<=n-(1<<k); ++i)
             spt[k][i] = fun(spt[k-1][i], spt[k-1][i+(1<<(k-1))]);
