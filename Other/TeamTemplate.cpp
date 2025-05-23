@@ -1,14 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define SET(m, i) ((m) | (1ULL << (i)))
-#define TEST(m, i) ((m) & (1ULL << (i)))
-#define CLEAR(m, i) ((m) &~ (1ULL << (i)))
-#define slice(a, n) ranges::subrange(a, a+n)
+#define SET(m,i) ((m)|(1ULL<<(i)))
+#define TEST(m,i) ((m)&(1ULL<<(i)))
+#define CLEAR(m,i) ((m)&~(1ULL<<(i)))
 #define DEBUG(n) cout<<#n<<" = "<<n<<endl
-#define DEBUG_ALL(a) for(auto &ee:a) cout<<ee<<' ';cout<<endl;
-#define ALL(v) (v).begin(), (v).end()
-#define ALLR(a) (a), (a+n)
+#define DEBUG_ALL(a) for(auto &w:a)cout<<w<<' ';cout<<endl;
+#define ALLN(x,n) begin(x), begin(x)+n
+#define ALL(x) begin(x), end(x)
 #define vec vector
 #define snd second
 #define fst first
